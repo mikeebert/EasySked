@@ -3,6 +3,7 @@ EasySked::Application.routes.draw do
   resources :employees
   resources :businesses
   resource :sessions
+  root :to => "sessions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
