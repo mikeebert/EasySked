@@ -1,6 +1,6 @@
 EasySked::Application.routes.draw do
   
-
+  resources :employees
   resources :businesses
   resource :sessions
 

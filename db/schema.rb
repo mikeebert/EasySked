@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122203944) do
+ActiveRecord::Schema.define(:version => 20111122225927) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,30 @@ ActiveRecord::Schema.define(:version => 20111122203944) do
     t.string   "name"
     t.integer  "payrate"
     t.integer  "business_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedules", :force => true do |t|
+    t.integer  "employee_id"
+    t.integer  "week_id"
+    t.integer  "rate_this_week"
+    t.integer  "total_hours"
+    t.integer  "total_pay"
+    t.time     "MonStart"
+    t.time     "MonEnd"
+    t.time     "TueStart"
+    t.time     "TueEnd"
+    t.time     "WedStart"
+    t.time     "WedEnd"
+    t.time     "ThuStart"
+    t.time     "ThuEnd"
+    t.time     "FriStart"
+    t.time     "FriEnd"
+    t.time     "SatStart"
+    t.time     "SatEnd"
+    t.time     "SunStart"
+    t.time     "SunEnd"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

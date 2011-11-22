@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  employee_id: 1
+  week_id: 1
+  rate_this_week: 1
+  total_hours: 1
+  total_pay: 1
+  MonStart: 2011-11-22 16:59:27
+  MonEnd: 2011-11-22 16:59:27
+  TueStart: 2011-11-22 16:59:27
+  TueEnd: 2011-11-22 16:59:27
+  WedStart: 2011-11-22 16:59:27
+  WedEnd: 2011-11-22 16:59:27
+  ThuStart: 2011-11-22 16:59:27
+  ThuEnd: 2011-11-22 16:59:27
+  FriStart: 2011-11-22 16:59:27
+  FriEnd: 2011-11-22 16:59:27
+  SatStart: 2011-11-22 16:59:27
+  SatEnd: 2011-11-22 16:59:27
+  SunStart: 2011-11-22 16:59:27
+  SunEnd: 2011-11-22 16:59:27
+
+two:
+  employee_id: 1
+  week_id: 1
+  rate_this_week: 1
+  total_hours: 1
+  total_pay: 1
+  MonStart: 2011-11-22 16:59:27
+  MonEnd: 2011-11-22 16:59:27
+  TueStart: 2011-11-22 16:59:27
+  TueEnd: 2011-11-22 16:59:27
+  WedStart: 2011-11-22 16:59:27
+  WedEnd: 2011-11-22 16:59:27
+  ThuStart: 2011-11-22 16:59:27
+  ThuEnd: 2011-11-22 16:59:27
+  FriStart: 2011-11-22 16:59:27
+  FriEnd: 2011-11-22 16:59:27
+  SatStart: 2011-11-22 16:59:27
+  SatEnd: 2011-11-22 16:59:27
+  SunStart: 2011-11-22 16:59:27
+  SunEnd: 2011-11-22 16:59:27

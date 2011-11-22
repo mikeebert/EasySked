@@ -1,3 +1,13 @@
 <h1>Businesses#show</h1>
 <p>Find me in app/views/businesses/show.html.erb</p>
 
+<table>
+  <% @business.employees.each do |employee| %>
+    <tr>
+      <td><%= employee.name %></td>
+      <td><%= employee.payrate %></td>
+      <td><%= link_to "Edit", edit_employee_url(employee) %></td>
+      <td><%= link_to "Delete", employee_url(employee), :confirm => "Are you sure?" %></td>
+    </tr>
+  <% end %>
+</table>
