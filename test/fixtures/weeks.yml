@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  business_id: 1
+  start_date: 2011-11-22
+  payroll_total: 1
+  number: 1
+
+two:
+  business_id: 1
+  start_date: 2011-11-22
+  payroll_total: 1
+  number: 1

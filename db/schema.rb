@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122225927) do
+ActiveRecord::Schema.define(:version => 20111122232140) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(:version => 20111122225927) do
     t.time     "SatEnd"
     t.time     "SunStart"
     t.time     "SunEnd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "weeks", :force => true do |t|
+    t.integer  "business_id"
+    t.date     "start_date"
+    t.integer  "payroll_total"
+    t.integer  "week_of_year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
