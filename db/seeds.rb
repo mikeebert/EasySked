@@ -7,62 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Week.destroy_all
-Week.create(start_date:2011-11-21, week_of_year:47)
-Week.create(start_date:2011-11-28, week_of_year:48)
-Week.create(start_date:2011-12-5, week_of_year:49)
-Week.create(start_date:2011-12-12, week_of_year:50)
-Week.create(start_date:2011-12-19, week_of_year:51)
-Week.create(start_date:2011-12-26, week_of_year:52)
-Week.create(start_date:2012-01-2, week_of_year:1)
-Week.create(start_date:2012-01-9, week_of_year:2)
-Week.create(start_date:2012-01-16, week_of_year:3)
-Week.create(start_date:2012-01-23, week_of_year:4)
-Week.create(start_date:2012-01-30, week_of_year:5)
-Week.create(start_date:2012-02-6, week_of_year:6)
-Week.create(start_date:2012-02-13, week_of_year:7)
-Week.create(start_date:2012-02-20, week_of_year:8)
-Week.create(start_date:2012-02-27, week_of_year:9)
-Week.create(start_date:2012-03-5, week_of_year:10)
-Week.create(start_date:2012-03-12, week_of_year:11)
-Week.create(start_date:2012-03-19, week_of_year:12)
-Week.create(start_date:2012-03-26, week_of_year:13)
-Week.create(start_date:2012-04-2, week_of_year:14)
-Week.create(start_date:2012-04-9, week_of_year:15)
-Week.create(start_date:2012-04-16, week_of_year:16)
-Week.create(start_date:2012-04-23, week_of_year:17)
-Week.create(start_date:2012-04-30, week_of_year:18)
-Week.create(start_date:2012-05-7, week_of_year:19)
-Week.create(start_date:2012-05-14, week_of_year:20)
-Week.create(start_date:2012-05-21, week_of_year:21)
-Week.create(start_date:2012-05-28, week_of_year:22)
-Week.create(start_date:2012-06-4, week_of_year:23)
-Week.create(start_date:2012-06-11, week_of_year:24)
-Week.create(start_date:2012-06-18, week_of_year:25)
-Week.create(start_date:2012-06-25, week_of_year:26)
-Week.create(start_date:2012-07-2, week_of_year:27)
-Week.create(start_date:2012-07-9, week_of_year:28)
-Week.create(start_date:2012-07-16, week_of_year:29)
-Week.create(start_date:2012-07-23, week_of_year:30)
-Week.create(start_date:2012-07-30, week_of_year:31)
-# WHY WON'T THE AUGUST MONTHS SEED? Received an 'Invalid octal digit'
-# Week.create(start_date:2012-08-6, week_of_year:32)
-# Week.create(start_date:2012-08-13, week_of_year:33)
-# Week.create(start_date:2012-08-20, week_of_year:34)
-# Week.create(start_date:2012-08-27, week_of_year:35)
-# Week.create(start_date:2012-09-3, week_of_year:36)
-# Week.create(start_date:2012-09-10, week_of_year:37)
-# Week.create(start_date:2012-09-17, week_of_year:38)
-# Week.create(start_date:2012-09-24, week_of_year:39)
-# Week.create(start_date:2012-10-1, week_of_year:40)
-# Week.create(start_date:2012-10-8, week_of_year:41)
-# Week.create(start_date:2012-10-15, week_of_year:42)
-# Week.create(start_date:2012-10-22, week_of_year:43)
-# Week.create(start_date:2012-10-29, week_of_year:44)
-# Week.create(start_date:2012-11-5, week_of_year:45)
-# Week.create(start_date:2012-11-12, week_of_year:46)
-# Week.create(start_date:2012-11-19, week_of_year:47)
-# Week.create(start_date:2012-11-26, week_of_year:48)
-# Week.create(start_date:2012-12-3, week_of_year:49)
-# Week.create(start_date:2012-12-10, week_of_year:50)
-# Week.create(start_date:2012-12-17, week_of_year:51)
-# Week.create(start_date:2012-12-24, week_of_year:52)
+t = Time.now.next_week
+w = 48
+i = 1
+
+52.times do  
+  if w == 53
+    w = 1
+  end
+  
+  Week.create(id:i,start_date:t, week_of_year:w)
+  
+  t = t.next_week
+  w = w + 1
+  
+end
+
