@@ -4,6 +4,8 @@
 
 rails g model employee_id:integer week_id:integer rate_this_week:integer total_hours:integer total_pay:integer MonStart:time MonEnd:time TueStart:time TueEnd:time WedStart:time WedEnd:time ThuStart:time ThuEnd:time FriStart:time FriEnd:time SatStart:time SatEnd:time SunStart:time SunEnd:time
 
+f.collection_select :schedule_id, Schedule.all, :id, :MonStart, :prompt => true
+
 #original seed code for Weeks. Failed because we received an "Invalid Octal Digit" error on August 2012 weeks.
 
 Week.create(start_date:2011-11-21, week_of_year:47)

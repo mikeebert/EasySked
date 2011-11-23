@@ -1,0 +1,5 @@
+<%= form_for(@employee) do |f| %>
+  <p>Employee Name  <%= f.text_field :name, :placeholder => "First and last name" %></p>
+  <p>Pay Rate with no decimal $<%= f.number_field :payrate, :placeholder => "Eg. $8.25 = 825" %></p>
+  <%= f.submit "Save" %>
+<% end %>
