@@ -1,6 +1,0 @@
-2011-11-24 Ebert *Happy Thanksgiving*
-- Reformatted schedules/new into a table. Played around with assets/application.css for table styling
-- Reformatted schedules/new to include AM/PM and 15-minute steps.
-- Added link on businesses/show to include "add new schedule" for an employee. Passes the parameters of that employee id and payrate  so that we can pass them and…
-- Updated schedules "new" method to include payrate and employee id
-- Updated schedules/new form to include hidden fields for employee_id and rate_this_week
