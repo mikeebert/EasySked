@@ -1,6 +1,8 @@
 <h1>Businesses#show</h1>
 <p>Find me in app/views/businesses/show.html.erb</p>
 
+<%= link_to "Add a new employee here", new_employee_url %>
+
 <table>
   <% @business.employees.each do |employee| %>
     <tr>
@@ -13,3 +15,4 @@
 </table>
 
 <%= link_to "Build New Weekly Schedule",  %>
+

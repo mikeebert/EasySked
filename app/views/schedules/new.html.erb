@@ -1,0 +1,29 @@
+
+
+
+<%= form_for @schedule do|f| %>
+
+Pay rate this week: <%= f.text_field "rate_this_week" %>
+
+<ul>
+Monday Start: <%= f.text_field "MonStart" %>
+Monday End: <%= f.text_field "MonEnd" %>
+Tues Start: <%= f.text_field "TueStart" %>
+Tues End: <%= f.text_field "TueEnd" %>
+Wed Start: <%= f.text_field "WedStart" %>
+Wed End: <%= f.text_field "WedEnd" %>
+Thurs Start: <%= f.text_field "ThuStart" %>
+Thurs End: <%= f.text_field "ThuEnd" %>
+Fri Start: <%= f.text_field "FriStart" %>
+Fri End: <%= f.text_field "FriEnd" %>
+Sat Start: <%= f.text_field "SatStart" %>
+Sat End: <%= f.text_field "SatEnd" %>
+Sun Start: <%= f.text_field "SunStart" %>
+Sun End: <%= f.text_field "SunEnd" %>
+</ul>
+
+
+<%= f.submit %>
+<% end %>
+    
+    
