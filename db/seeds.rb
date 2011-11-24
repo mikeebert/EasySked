@@ -6,17 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Week.destroy_all
-t = Time.now.next_week
-w = 48
-i = 1
+t = Week.last.start_date.next_week
+w = Week.last.week_of_year
 
 52.times do  
   if w == 53
     w = 1
   end
   
-  Week.create(id:i,start_date:t, week_of_year:w)
+  Week.create(start_date:t, week_of_year:w)
   
   t = t.next_week
   w = w + 1
