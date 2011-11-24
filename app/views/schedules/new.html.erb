@@ -1,29 +1,42 @@
-
-
-
-<%= form_for @schedule do|f| %>
-
-Pay rate this week: <%= f.text_field "rate_this_week" %>
-
-<ul>
-Monday Start: <%= f.text_field "MonStart" %>
-Monday End: <%= f.text_field "MonEnd" %>
-Tues Start: <%= f.text_field "TueStart" %>
-Tues End: <%= f.text_field "TueEnd" %>
-Wed Start: <%= f.text_field "WedStart" %>
-Wed End: <%= f.text_field "WedEnd" %>
-Thurs Start: <%= f.text_field "ThuStart" %>
-Thurs End: <%= f.text_field "ThuEnd" %>
-Fri Start: <%= f.text_field "FriStart" %>
-Fri End: <%= f.text_field "FriEnd" %>
-Sat Start: <%= f.text_field "SatStart" %>
-Sat End: <%= f.text_field "SatEnd" %>
-Sun Start: <%= f.text_field "SunStart" %>
-Sun End: <%= f.text_field "SunEnd" %>
-</ul>
-
-
-<%= f.submit %>
-<% end %>
-    
-    
+<table id="sked">
+  <tr align="center">
+    <td></td>
+    <td></td>
+    <td>Monday</td>
+    <td>Tuesday</td>
+    <td>Wednesday</td>
+    <td>Thursday</td>
+    <td>Friday</td>
+    <td>Saturday</td>
+    <td>Sunday</td>
+    <td></td>
+  </tr>
+  <tr id="select_time">
+    <td rowspan="2" class="employee_name"><%= @employee.name %> </td>
+    <%= form_for(@schedule) do |f| %>
+    <td>Start</td>      
+    <td><%= f.time_select(:MonStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:TueStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:WedStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:ThuStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:FriStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:SatStart, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:SunStart, ampm:true, minute_step:15) %></td>
+    <td rowspan="2" class"schedule_save">      
+      <%= f.hidden_field :rate_this_week %>
+      <%= f.hidden_field :employee_id %>
+      <%= f.submit "Save" %>
+    </td>
+  </tr>  
+  <tr>
+    <td>End</td>
+    <td><%= f.time_select(:MonEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:TueEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:WedEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:ThuEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:FriEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:SatEnd, ampm:true, minute_step:15) %></td>
+    <td><%= f.time_select(:SunEnd, ampm:true, minute_step:15) %></td>
+    <% end %>
+  </tr>
+</table>

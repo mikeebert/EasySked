@@ -8,6 +8,7 @@
     <tr>
       <td><%= employee.name %></td>
       <td><%= employee.payrate %></td>
+      <td><%= link_to "Build New Schedule", new_schedule_url(:employee_id => employee.id, :rate_this_week => employee.payrate) %></td>
       <td><%= link_to "Edit", edit_employee_url(employee) %></td>
       <td><%= link_to "Delete", employee_url(employee), :confirm => "Are you sure?" %></td>
     </tr>

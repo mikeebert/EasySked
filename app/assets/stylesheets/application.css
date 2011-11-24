@@ -5,3 +5,25 @@
  *= require_self
  *= require_tree . 
 */
+
+
+body {
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+#sked {
+	font-size: small;
+	border-bottom: 1px solid #333;
+	 
+}
+
+#sked {
+	border-collapse: collapse;	
+}
+
+#sked td {
+	border-bottom: 1px solid;
+}
+
+.employee_name {
+	padding-right: 10px;
+}
